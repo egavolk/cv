@@ -9,6 +9,8 @@ script:
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build src/cv.tex
 deploy:
   provider: releases
+  api_key:
+    secure: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCjUSjIhWwB8iuovghfJR2ILiITlm+60xTLXQk7pEeiuxolu+tpyY4o4OHr6r+QQ+thbq4pMmhdiZQSTggqtaBQjiuNcvJtoYp5ODnaV82My5zoYj55gCtniBn7ssduafnaKLK2ycNu+Sje8qP9g55bS2wt2rKRjYf54UAmyXylcAtClpMTnRKu1SnP6hK8zxD2HkWe77Rt1N35ov2x+AMERqn3CbgfI0UWeiCiZcVYtzNlr4TKibgX02SEJr6oWWQUmDS0i9ZyAMec5RSDRHZV9CQRYZ73XQT538d+nLWzBHrFwQiHo2XVzUqr1tdV6EAiu5srjbGGdzAEEVWbjYWyeAl9qPyO3oKLQ4fphh68KNo+RxJxD4cfrcMyN1tESq/KUOPDzRSWo0KtD6adUpKeL0sf1/TdV3AJGlsyIdIQTDaL3G05NMUd/IwHpzGmwBgX/4xApllgWLxL5uaeVw2zZMByQj6GVdZxBWPSHwqqrslW9QLmrysl67A0dg77eG3Gf+0gOSboPV6hbn4iz/2a0/i/zU42gqPTu8tCaKVv4hm50ONRNw+RhSPCDt2ZtVhWD50FLSEpb8iLJHLhs6RhVT1Mybco6LGylpvfjNQNvqv+Y7KBGNcSM2pXVuwvPuY3DOSg/E1Y3YnmxgA1rxQ3pa3loaDBTsxS5RwIjRrtVw== ega.volk@gmail.com"
   file: _build/cv.pdf
   skip_cleanup: true
   overwrite: true
