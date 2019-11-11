@@ -1,17 +1,19 @@
 sudo: required
 dist: trusty
-before_install:
-- sudo apt-get -qq update && sudo apt-get install -y texlive-fonts-recommended texlive-latex-extra
-  texlive-fonts-extra dvipng texlive-latex-recommended latex-xcolor pgf texlive-pictures
-  texlive-full
+#before_install:
+#- sudo apt-get -qq update && sudo apt-get install -y texlive-fonts-recommended texlive-latex-extra
+#  texlive-fonts-extra dvipng texlive-latex-recommended latex-xcolor pgf texlive-pictures
+#  texlive-full
 script:
-- mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build src/cv.tex
+#- mkdir _build
+#- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build src/cv.tex
+- echo "Hello" > hello
 deploy:
   provider: releases
   api_key:
     secure: "NIeCKD34RE9ndV9gCHoGTddouuc6Ch86AZRsRu8bY+i0YjM6IzTDin3ez51ncx85o9suZgHNyL1cSzAgIbk7OIP279vf0jXhIIlhWU6YI2ecfHGbj0OwbD9PfleNAdE3xvII/Lc4nhyz9VZHz1XGoRMxul5mmugIr74/tSIgqkQXhkROJGI/D6+PYAsFeMpTrbfckdwgMaxV8pkgzP1URkNULMoJOPATvRBsWltEi0wwfDe7+6kUSt2gUSag6RTZQfnJ9IP22N5pDAhCHmt1Vfhr0FzouRkxBqpsVUwUhBMZSIUFRWsjxqHV1l+st02fNmA6rrLiKAB4kjKawpAKAeDAeP4RhoG7CYXpAdq4CLk2Hj8dcK+97jccYilm1ikZ0JAS2rhZ6UmUwB8/9tUu9L0MqlQsdgbaChTkNY/DyiZ6OCXYvXPiOeRyaPyE6ARj306JfjlBv8Qla1eyCHc8YtOP7p9anFcdJvoPM0B2U4tkOSIW45j6BafOLLMWxVhgSdkNHM3HJuOck+NUq+FDYXH5HfilysDLpRyjApgX2SDZPXhiQzJXsgZyJKhcio9xoyRF5FUEVmb/g3aZff9adApo7htrgFTW/iP8CwWzk5UxAZlWA+TqE92yPfnKGTPZYa1l9fKQC57EjbROnYu2wVm+Pf2lCRMyXJZP2PbzPIs="
-  file: _build/cv.pdf
+#  file: _build/cv.pdf
+  file: hello
   skip_cleanup: true
   overwrite: true
   on:
